@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		FFDFDDE42DC4E73B0009DE86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFDFDDC52DC4E7390009DE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFDFDDCC2DC4E7390009DE86;
+			remoteInfo = ViNET;
+		};
+		FFDFDDEE2DC4E73B0009DE86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFDFDDC52DC4E7390009DE86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFDFDDCC2DC4E7390009DE86;
+			remoteInfo = ViNET;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FFDFDDCD2DC4E7390009DE86 /* ViNET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViNET.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDFDDE32DC4E73B0009DE86 /* ViNETTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViNETTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDFDDED2DC4E73B0009DE86 /* ViNETUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViNETUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FFDFDDF52DC4E73B0009DE86 /* Exceptions for "ViNET" folder in "ViNET" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FFDFDDCC2DC4E7390009DE86 /* ViNET */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FFDFDDCF2DC4E7390009DE86 /* ViNET */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FFDFDDF52DC4E73B0009DE86 /* Exceptions for "ViNET" folder in "ViNET" target */,
+			);
+			path = ViNET;
+			sourceTree = "<group>";
+		};
+		FFDFDDE62DC4E73B0009DE86 /* ViNETTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViNETTests;
+			sourceTree = "<group>";
+		};
+		FFDFDDF02DC4E73B0009DE86 /* ViNETUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViNETUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFDFDDCA2DC4E7390009DE86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDFDDE02DC4E73B0009DE86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDFDDEA2DC4E73B0009DE86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFDFDDC42DC4E7390009DE86 = {
+			isa = PBXGroup;
+			children = (
+				FFDFDDCF2DC4E7390009DE86 /* ViNET */,
+				FFDFDDE62DC4E73B0009DE86 /* ViNETTests */,
+				FFDFDDF02DC4E73B0009DE86 /* ViNETUITests */,
+				FFDFDDCE2DC4E7390009DE86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFDFDDCE2DC4E7390009DE86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFDFDDCD2DC4E7390009DE86 /* ViNET.app */,
+				FFDFDDE32DC4E73B0009DE86 /* ViNETTests.xctest */,
+				FFDFDDED2DC4E73B0009DE86 /* ViNETUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFDFDDCC2DC4E7390009DE86 /* ViNET */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDFDDF62DC4E73B0009DE86 /* Build configuration list for PBXNativeTarget "ViNET" */;
+			buildPhases = (
+				FFDFDDC92DC4E7390009DE86 /* Sources */,
+				FFDFDDCA2DC4E7390009DE86 /* Frameworks */,
+				FFDFDDCB2DC4E7390009DE86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FFDFDDCF2DC4E7390009DE86 /* ViNET */,
+			);
+			name = ViNET;
+			packageProductDependencies = (
+			);
+			productName = ViNET;
+			productReference = FFDFDDCD2DC4E7390009DE86 /* ViNET.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFDFDDE22DC4E73B0009DE86 /* ViNETTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDFDDFB2DC4E73B0009DE86 /* Build configuration list for PBXNativeTarget "ViNETTests" */;
+			buildPhases = (
+				FFDFDDDF2DC4E73B0009DE86 /* Sources */,
+				FFDFDDE02DC4E73B0009DE86 /* Frameworks */,
+				FFDFDDE12DC4E73B0009DE86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFDFDDE52DC4E73B0009DE86 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FFDFDDE62DC4E73B0009DE86 /* ViNETTests */,
+			);
+			name = ViNETTests;
+			packageProductDependencies = (
+			);
+			productName = ViNETTests;
+			productReference = FFDFDDE32DC4E73B0009DE86 /* ViNETTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFDFDDEC2DC4E73B0009DE86 /* ViNETUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDFDDFE2DC4E73B0009DE86 /* Build configuration list for PBXNativeTarget "ViNETUITests" */;
+			buildPhases = (
+				FFDFDDE92DC4E73B0009DE86 /* Sources */,
+				FFDFDDEA2DC4E73B0009DE86 /* Frameworks */,
+				FFDFDDEB2DC4E73B0009DE86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFDFDDEF2DC4E73B0009DE86 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FFDFDDF02DC4E73B0009DE86 /* ViNETUITests */,
+			);
+			name = ViNETUITests;
+			packageProductDependencies = (
+			);
+			productName = ViNETUITests;
+			productReference = FFDFDDED2DC4E73B0009DE86 /* ViNETUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFDFDDC52DC4E7390009DE86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					FFDFDDCC2DC4E7390009DE86 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					FFDFDDE22DC4E73B0009DE86 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = FFDFDDCC2DC4E7390009DE86;
+					};
+					FFDFDDEC2DC4E73B0009DE86 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = FFDFDDCC2DC4E7390009DE86;
+					};
+				};
+			};
+			buildConfigurationList = FFDFDDC82DC4E7390009DE86 /* Build configuration list for PBXProject "ViNET" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFDFDDC42DC4E7390009DE86;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FFDFDDCE2DC4E7390009DE86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFDFDDCC2DC4E7390009DE86 /* ViNET */,
+				FFDFDDE22DC4E73B0009DE86 /* ViNETTests */,
+				FFDFDDEC2DC4E73B0009DE86 /* ViNETUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFDFDDCB2DC4E7390009DE86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDFDDE12DC4E73B0009DE86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDFDDEB2DC4E73B0009DE86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFDFDDC92DC4E7390009DE86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDFDDDF2DC4E73B0009DE86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDFDDE92DC4E73B0009DE86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFDFDDE52DC4E73B0009DE86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFDFDDCC2DC4E7390009DE86 /* ViNET */;
+			targetProxy = FFDFDDE42DC4E73B0009DE86 /* PBXContainerItemProxy */;
+		};
+		FFDFDDEF2DC4E73B0009DE86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFDFDDCC2DC4E7390009DE86 /* ViNET */;
+			targetProxy = FFDFDDEE2DC4E73B0009DE86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FFDFDDF72DC4E73B0009DE86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ViNET/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DilayEce.ViNET;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFDFDDF82DC4E73B0009DE86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ViNET/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DilayEce.ViNET;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FFDFDDF92DC4E73B0009DE86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFDFDDFA2DC4E73B0009DE86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFDFDDFC2DC4E73B0009DE86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DilayEce.ViNETTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViNET.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ViNET";
+			};
+			name = Debug;
+		};
+		FFDFDDFD2DC4E73B0009DE86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DilayEce.ViNETTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViNET.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ViNET";
+			};
+			name = Release;
+		};
+		FFDFDDFF2DC4E73B0009DE86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DilayEce.ViNETUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ViNET;
+			};
+			name = Debug;
+		};
+		FFDFDE002DC4E73B0009DE86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DilayEce.ViNETUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ViNET;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFDFDDC82DC4E7390009DE86 /* Build configuration list for PBXProject "ViNET" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDFDDF92DC4E73B0009DE86 /* Debug */,
+				FFDFDDFA2DC4E73B0009DE86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDFDDF62DC4E73B0009DE86 /* Build configuration list for PBXNativeTarget "ViNET" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDFDDF72DC4E73B0009DE86 /* Debug */,
+				FFDFDDF82DC4E73B0009DE86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDFDDFB2DC4E73B0009DE86 /* Build configuration list for PBXNativeTarget "ViNETTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDFDDFC2DC4E73B0009DE86 /* Debug */,
+				FFDFDDFD2DC4E73B0009DE86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDFDDFE2DC4E73B0009DE86 /* Build configuration list for PBXNativeTarget "ViNETUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDFDDFF2DC4E73B0009DE86 /* Debug */,
+				FFDFDE002DC4E73B0009DE86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFDFDDC52DC4E7390009DE86 /* Project object */;
+}
