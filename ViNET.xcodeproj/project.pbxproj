@@ -30,10 +30,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FFDFDDF52DC4E73B0009DE86 /* Exceptions for "ViNET" folder in "ViNET" target */ = {
+		2D9AC8C82DC5519000B65F86 /* Exceptions for "ViNET" folder in "ViNET" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				Untitled.swift,
 			);
 			target = FFDFDDCC2DC4E7390009DE86 /* ViNET */;
 		};
@@ -43,7 +44,7 @@
 		FFDFDDCF2DC4E7390009DE86 /* ViNET */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				FFDFDDF52DC4E73B0009DE86 /* Exceptions for "ViNET" folder in "ViNET" target */,
+				2D9AC8C82DC5519000B65F86 /* Exceptions for "ViNET" folder in "ViNET" target */,
 			);
 			path = ViNET;
 			sourceTree = "<group>";
@@ -289,6 +290,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QR99LBN57F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ViNET/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +318,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QR99LBN57F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ViNET/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
