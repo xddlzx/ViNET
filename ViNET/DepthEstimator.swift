@@ -100,7 +100,8 @@ class DepthEstimator {
     let meanInv = sum / Float((y1 - y0) * (x1 - x0))
 
     // Simple calibration (tweak 1.0–1.5 to taste)
-    let metres = 0.02 / Double(meanInv)
+    let metres = abs(100 * (0.02 / Double(meanInv) - 1))
     return metres
   }
 }
+

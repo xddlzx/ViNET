@@ -32,7 +32,7 @@ class VoiceReporter: NSObject {
         case 0.66...: side = "right"
         default:      side = "in front"
       }
-      return String(format: "A %@ is %.1f metres to the %@.",
+      return String(format: "A %@ is %.1f centimetres to the %@.",
                     det.label, dist, side)
     }.joined(separator: " ")
 
