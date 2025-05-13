@@ -1,7 +1,6 @@
-// ViewController.swift
-
 import UIKit
-import AVFoundation       // ← for playing MP3
+import AVFoundation
+import AudioToolbox    // ← for kSystemSoundID_Vibrate
 
 class ViewController: UIViewController {
     // MARK: – AI / Camera
@@ -12,8 +11,19 @@ class ViewController: UIViewController {
     private var lastRun = Date.distantPast
 
     // MARK: – Audio
-    private var audioPlayer: AVAudioPlayer?
-    private var warningPlayer: AVAudioPlayer?
+    private var audioPlayer: AVAudioPlayer?      // Opening sound player
+
+    // MARK: – UI
+    private let instructionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Double-click the screen to stop, and single-click to continue."
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        label.textAlignment = .center
+        label.numberOfLines = 1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
     // MARK: – Pause State & Overlay
     private var isPaused = false
@@ -23,30 +33,35 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
 
-        // 1) Play opening sound
+        // Add persistent instruction label
+        view.addSubview(instructionLabel)
+        NSLayoutConstraint.activate([
+            instructionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            instructionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            instructionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+
+        // Play the welcome tone
         playOpeningSound()
 
-        // 2) Setup pause/resume gestures
+        // Setup double-tap to pause (with vibration)
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap(_:)))
         doubleTap.numberOfTapsRequired = 2
         view.addGestureRecognizer(doubleTap)
 
+        // Setup single-tap to resume
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap(_:)))
         singleTap.numberOfTapsRequired = 1
         singleTap.require(toFail: doubleTap)
         view.addGestureRecognizer(singleTap)
 
-        // 3) Insert preview layer
+        // Insert camera preview
         view.layer.insertSublayer(camera.previewLayer, at: 0)
-
-        // 4) Wire up camera delegate & start
         camera.delegate = self
         camera.start()
 
-        // 5) Initialize AI models
-        guard let det = ObjectDetector(),
-              let est = DepthEstimator()
-        else {
+        // Initialize AI models
+        guard let det = ObjectDetector(), let est = DepthEstimator() else {
             fatalError("🔴 Model initialization failed")
         }
         detector = det
@@ -63,19 +78,28 @@ class ViewController: UIViewController {
 
     @objc private func handleDoubleTap(_ gesture: UITapGestureRecognizer) {
         guard !isPaused else { return }
+
+        // Vibrate immediately on double-tap
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+
+        // Then pause
         pauseCamera()
     }
 
     @objc private func handleSingleTap(_ gesture: UITapGestureRecognizer) {
         guard isPaused else { return }
+
+        // Vibrate on resume
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
         resumeCamera()
     }
 
+    // MARK: – Pause / Resume
+
     private func pauseCamera() {
         isPaused = true
-        camera.stop()                // stop capture & preview
-        showPauseOverlay()
-        playWarningSound()
+        camera.stop()                      // Halt capture
+        showPauseOverlay()                 // Black screen + message
     }
 
     private func resumeCamera() {
@@ -84,12 +108,12 @@ class ViewController: UIViewController {
         camera.start()
     }
 
-    // MARK: – Pause Overlay
+    // MARK: – Overlay UI
 
     private func showPauseOverlay() {
         if pauseOverlay == nil {
             let overlay = UIView(frame: view.bounds)
-            overlay.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            overlay.backgroundColor = .black
 
             let label = UILabel()
             label.text = "Camera paused, please tap the screen to continue"
@@ -121,32 +145,16 @@ class ViewController: UIViewController {
     // MARK: – Audio Helpers
 
     private func playOpeningSound() {
-        guard let path = Bundle.main.path(forResource: "welcome", ofType: "mp3") else {
-            print("[Audio] welcome.mp3 not found")
+        guard let url = Bundle.main.url(forResource: "welcome", withExtension: "mp3") else {
+            print("[Audio] welcome.mp3 not found in bundle.")
             return
         }
-        let url = URL(fileURLWithPath: path)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.prepareToPlay()
             audioPlayer?.play()
         } catch {
             print("[Audio] Failed to play welcome.mp3: \(error)")
-        }
-    }
-
-    private func playWarningSound() {
-        guard let path = Bundle.main.path(forResource: "warning", ofType: "mp3") else {
-            print("[Audio] warning.mp3 not found")
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        do {
-            warningPlayer = try AVAudioPlayer(contentsOf: url)
-            warningPlayer?.prepareToPlay()
-            warningPlayer?.play()
-        } catch {
-            print("[Audio] Failed to play warning.mp3: \(error)")
         }
     }
 }
@@ -156,7 +164,7 @@ class ViewController: UIViewController {
 extension ViewController: CameraSessionDelegate {
     func cameraSession(_ session: CameraSession,
                        didCapturePixelBuffer buffer: CVPixelBuffer) {
-        // Skip processing while paused
+        // Skip while paused
         guard !isPaused else { return }
 
         let now = Date()
@@ -165,10 +173,8 @@ extension ViewController: CameraSessionDelegate {
 
         detector.detectObjects(in: buffer) { [weak self] dets in
             guard let self = self, !dets.isEmpty else { return }
-
-            let tops = dets.sorted(by: { $0.confidence > $1.confidence }).prefix(3)
+            let tops = dets.sorted(by: { $0.confidence > $1.confidence }).prefix(1)
             var results: [(Detection, Double)] = []
-
             for d in tops {
                 if let dist = self.estimator.estimateDistance(
                                 from: buffer,
@@ -177,7 +183,6 @@ extension ViewController: CameraSessionDelegate {
                 }
             }
             guard !results.isEmpty else { return }
-
             DispatchQueue.main.async {
                 self.reporter.speak(detections: results)
             }
